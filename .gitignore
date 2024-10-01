@@ -1,0 +1,11 @@
+venv/
+db.sqlite3
+.env
+*.log
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Исключение данных о сессиях
+*.session
