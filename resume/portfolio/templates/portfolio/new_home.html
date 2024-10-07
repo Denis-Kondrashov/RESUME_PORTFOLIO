@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'css/new_style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="background-image: url('{% static "images/background.jpg" %}')">
+    <div class="resume-container">
+        <!-- Left section with image and contact details -->
+        <div class="left-section">
+            <img src="{% static 'images/profile.jpg' %}" alt="Your Photo" class="profile-pic">
+            <h1>Денис Кондрашов</h1>
+            
+            <div class="contact-info">
+                <div class="icon-text">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 900 123 45 78</span>
+                </div>
+                <div class="icon-text">
+                    <i class="fas fa-envelope"></i>
+                    <span>mail@mail.com</span>
+                </div>
+                <div class="icon-text">
+                    <a href="https://t.me/yourtelegram" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://vk.com/yourvk" target="_blank">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right section with skills and content -->
+        <div class="right-section">
+            <h2>Мои навыки</h2>
+            <p>Я программист на Python.</p>
+            
+            <h3>Учеба</h3>
+            <a href="#" class="details-link">Подробнее...</a>
+            
+            <h3>Проекты</h3>
+            <a href="#" class="details-link">Подробнее...</a>
+        </div>
+    </div>
+</body>
+</html>
