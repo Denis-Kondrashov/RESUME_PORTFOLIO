@@ -12,7 +12,7 @@
     <div class="resume-container">
         <!-- Left section with image and contact details -->
         <div class="left-section">
-            <img src="{% static 'images/profile.jpg' %}" alt="Your Photo" class="profile-pic">
+            <img src="{% static 'images/profile.jpg' %}"  class="profile-pic">
             <h1>Денис Кондрашов</h1>
             
             <div class="contact-info">
@@ -37,14 +37,9 @@
 
         <!-- Right section with skills and content -->
         <div class="right-section">
-            <h2>Мои навыки</h2>
-            <p>Я программист на Python.</p>
-            
-            <h3>Учеба</h3>
-            <a href="#" class="details-link">Подробнее...</a>
-            
-            <h3>Проекты</h3>
-            <a href="#" class="details-link">Подробнее...</a>
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
         </div>
     </div>
 </body>
