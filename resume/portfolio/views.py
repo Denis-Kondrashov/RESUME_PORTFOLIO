@@ -1,10 +1,6 @@
 from django.shortcuts import render
 
 
-def new_html(request):
-    return render(request, 'portfolio/new_home.html')
-
-
 def home(request):
     return render(request, 'portfolio/home.html')
 

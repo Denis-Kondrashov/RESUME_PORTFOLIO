@@ -78,6 +78,11 @@ p {
     margin-bottom: 30px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .details-link {
     display: inline-block;
     margin-bottom: 20px;
