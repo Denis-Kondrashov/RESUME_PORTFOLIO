@@ -1,18 +1,16 @@
 {% extends 'portfolio/base.html' %}
 
-{% block title %}Главная | Denis Kondrashov{% endblock %}
-
 {% block content %}
 
     <section class="grid">
         <div class="grid-item">
-            <h2><a href="{% url 'skills' %}">Умения</a></h2>
+            <h2><a href="{% url 'skills' %}">Навыки</a></h2>
         </div>
         <div class="grid-item">
-            <h2><a href="{% url 'achievements' %}">Достижения</a></h2>
+            <h2><a href="{% url 'projects' %}">Проекты</a></h2>
         </div>
         <div class="grid-item">
-            <h2><a href="{% url 'education' %}">Учеба</a></h2>
+            <h2><a href="{% url 'education' %}">Обучение</a></h2>
         </div>
         <div class="grid-item">
             <h2><a href="{% url 'work_experience' %}">Опыт работы</a></h2>

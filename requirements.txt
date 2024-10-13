@@ -1,3 +1,4 @@
 Django
 pep8
 python-dotenv
+pillow

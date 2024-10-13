@@ -10,7 +10,7 @@ def skills(request):
 
 
 def achievements(request):
-    return render(request, 'portfolio/achievements.html')
+    return render(request, 'portfolio/projects.html')
 
 
 def education(request):
