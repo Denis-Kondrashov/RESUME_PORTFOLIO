@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import mark_safe
 
-from .models import Skill, Project, Education, WorkExperience
+from .models import Skill, Project, ProjectImage, Education, WorkExperience
 
 
 @admin.register(Skill)
@@ -11,21 +11,41 @@ class SkillAdmin(admin.ModelAdmin):
     list_filter = ('name',)
 
 
+class ProjectImageInline(admin.TabularInline):
+    model = ProjectImage
+    extra = 1
+    fields = ('image', 'preview')
+    readonly_fields = ('preview',)
+
+    def preview(self, obj):
+        if obj.image:
+            return mark_safe(
+                f'<img src="{obj.image.url}" width="100" height="100" />'
+                )
+        return 'Нет изображения'
+    preview.short_description = 'Превью'
+
+
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'link', 'image', 'image_tag')
+    list_display = ('title', 'description', 'link', 'image_tag')
     search_fields = ('title', 'description')
     list_filter = ('title',)
     list_editable = ('link',)
     list_per_page = 20
+    inlines = [ProjectImageInline]
 
     def image_tag(self, obj):
-        if obj.image:
+        images = obj.images.all()[:3]
+        if images:
             return mark_safe(
-                f'<img src="{obj.image.url}" width="125" height="125" />'
+                ''.join(
+                    f'<img src="{image.image.url}" width="50" height="50" '
+                    f'style="margin-right: 5px;" />' for image in images
                 )
-        else:
-            return 'No image'
+            )
+        return 'No image'
+
     image_tag.short_description = 'Превью'
 
 

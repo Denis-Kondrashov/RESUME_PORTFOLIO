@@ -17,10 +17,6 @@ class Project(models.Model):
     title = models.CharField(max_length=150, verbose_name="Название")
     description = models.TextField(verbose_name="Описание")
     link = models.URLField(blank=True, verbose_name="Ссылка")
-    image = models.ImageField(
-        upload_to='upload_media/',
-        verbose_name="Изображение"
-        )
 
     class Meta:
         verbose_name = "Проект"
@@ -28,6 +24,24 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ProjectImage(models.Model):
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='images',
+        verbose_name="Проект")
+    image = models.ImageField(
+        upload_to='upload_media/',
+        verbose_name="Изображение")
+
+    class Meta:
+        verbose_name = "Изображение проекта"
+        verbose_name_plural = "Изображения проектов"
+
+    def __str__(self):
+        return f"Изображение для {self.project.title}"
 
 
 class Education(models.Model):
