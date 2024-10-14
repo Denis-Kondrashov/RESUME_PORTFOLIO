@@ -8,4 +8,5 @@ __pycache__/
 *$py.class
 
 *.session
-media/upload_media/*
+/media/
+!/media/upload_media/
