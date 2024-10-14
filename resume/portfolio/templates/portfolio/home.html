@@ -2,19 +2,19 @@
 
 {% block content %}
 
-    <section class="grid">
-        <div class="grid-item">
-            <h2><a href="{% url 'skills' %}">Навыки</a></h2>
-        </div>
-        <div class="grid-item">
-            <h2><a href="{% url 'projects' %}">Проекты</a></h2>
-        </div>
-        <div class="grid-item">
-            <h2><a href="{% url 'education' %}">Обучение</a></h2>
-        </div>
-        <div class="grid-item">
-            <h2><a href="{% url 'work_experience' %}">Опыт работы</a></h2>
-        </div>
+<section class="grid">
+    <div class="grid-item">
+        <a href="{% url 'skills' %}" class="link-box">Навыки</a>
+    </div>
+    <div class="grid-item">
+        <a href="{% url 'projects' %}" class="link-box">Проекты</a>
+    </div>
+    <div class="grid-item">
+        <a href="{% url 'education' %}" class="link-box">Обучение</a>
+    </div>
+    <div class="grid-item">
+        <a href="{% url 'work_experience' %}" class="link-box">Опыт работы</a>
+    </div>
+</section>
 
-    </section>
 {% endblock %}
