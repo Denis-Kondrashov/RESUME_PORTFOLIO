@@ -87,14 +87,14 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; /* Используем для равномерного распределения */
-    height: 85vh; /* Задаем высоту секции так, чтобы боксы хорошо помещались */
+    justify-content: space-around;
+    height: 85vh;
     padding: 0 10%;
 }
 
 .grid-item {
-    width: 60%; /* Немного уменьшаем ширину для лучшего центрирования */
-    margin: 10px 0; /* Добавляем вертикальный отступ */
+    width: 60%;
+    margin: 10px 0
 }
 
 .link-box {
@@ -102,15 +102,15 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 30px 0; /* Увеличиваем высоту бокса */
-    background-color: rgba(44, 44, 44, 0.9); /* Цвет левой части */
-    color: #ffffff; /* Цвет текста, совпадающий с фоном левой части */
+    padding: 30px 0;
+    background-color: rgba(44, 44, 44, 0.9);
+    color: #ffffff;
     text-align: center;
     text-decoration: none;
-    border-radius: 10px; /* Закругленные углы */
+    border-radius: 10px;
     font-size: 18px;
 }
 
 .link-box:hover {
-    background-color: rgba(44, 44, 44, 0.7); /* Чуть более светлый цвет при наведении */
+    background-color: rgba(44, 44, 44, 0.7);
 }
