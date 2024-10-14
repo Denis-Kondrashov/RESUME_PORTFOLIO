@@ -42,16 +42,16 @@
 
 .project-images {
     display: flex;
-    justify-content: space-around; /* Пробел между изображениями */
-    align-items: center; /* Центрирование изображений по вертикали */
-    max-width: 100%; /* Полная ширина контейнера изображений */
-    flex-wrap: wrap; /* Обтекание изображений в случае нехватки места */
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .project-image {
-    width: 100px; /* Фиксированная ширина для всех изображений */
-    height: 100px; /* Фиксированная высота для всех изображений */
+    width: 100px;
+    height: 100px;
     border-radius: 5px;
-    object-fit: cover; /* Сохранение пропорций и заполнение заданного размера */
-    margin: 5px; /* Отступы вокруг изображений */
+    object-fit: cover;
+    margin: 5px;
 }
