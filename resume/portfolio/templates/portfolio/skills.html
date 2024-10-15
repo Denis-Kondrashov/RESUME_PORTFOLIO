@@ -2,5 +2,14 @@
 
 {% block content %}
     <h2>Навыки</h2>
-    <p>Здесь вы можете описать свои профессиональные навыки и компетенции.</p>
+
+    <div class="skills-container">
+        {% for skill in skills %}
+        <div class="skill-box">
+            <h3>{{ skill.name }}</h3>
+            <hr>
+            <p>{{ skill.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

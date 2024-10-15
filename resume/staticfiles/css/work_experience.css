@@ -1,0 +1,27 @@
+.work-experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-experience-box {
+    width: 80%;
+    background-color: rgba(44, 44, 44, 0.9);
+    color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.work-experience-box h3 {
+    margin: 0;
+}
+
+.work-experience-box hr {
+    border: 0;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 10px 0;
+}
