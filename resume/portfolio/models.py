@@ -63,6 +63,24 @@ class Education(models.Model):
         return self.institution
 
 
+class EducationImage(models.Model):
+    project = models.ForeignKey(
+        Education,
+        on_delete=models.CASCADE,
+        related_name='images',
+        verbose_name="Образование")
+    image = models.ImageField(
+        upload_to='upload_media/',
+        verbose_name="Изображение")
+
+    class Meta:
+        verbose_name = "Изображение диплома"
+        verbose_name_plural = "Изображения дипломов"
+
+    def __str__(self):
+        return f"Изображение для {self.project.field_of_study}"
+
+
 class WorkExperience(models.Model):
     company = models.CharField(max_length=150, verbose_name="Компания")
     position = models.CharField(max_length=100, verbose_name="Должность")

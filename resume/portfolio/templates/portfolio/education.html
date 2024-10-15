@@ -1,6 +1,21 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-    <h2>Обучение</h2>
-    <p>Здесь вы можете описать свое образование и учебные достижения.</p>
+    <h2>Образование</h2>
+
+    <div class="education-container">
+        {% for education in education %}
+        <div class="education-box">
+            <h3>{{ education.field_of_study }}</h3>
+            <hr>
+            <p>{{ education.institution }}</p>
+            <hr>
+            <div class="education-images">
+                {% for image in education.images.all|slice:":3" %}
+                    <img src="{{ image.image.url }}" alt="{{ education.field_of_study }}" class="education-image">
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>    
 {% endblock %}

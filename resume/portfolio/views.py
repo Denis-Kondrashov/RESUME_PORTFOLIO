@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Project
+from .models import Project, Education
 
 
 def home(request):
@@ -17,7 +17,8 @@ def projects(request):
 
 
 def education(request):
-    return render(request, 'portfolio/education.html')
+    education = Education.objects.all()
+    return render(request, 'portfolio/education.html', {'education': education})
 
 
 def work_experience(request):
