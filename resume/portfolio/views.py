@@ -1,35 +1,34 @@
-from django.shortcuts import render
+from django.views.generic import ListView, TemplateView
 
 from .models import Project, Education, Skill, WorkExperience
 
 
-def home(request):
-    return render(request, 'portfolio/home.html')
+# def home(request):
+#     return render(request, 'portfolio/home.html')
+
+class Home(TemplateView):
+    template_name = 'portfolio/home.html'
 
 
-def skills(request):
-    skills = Skill.objects.all()
-    return render(request, 'portfolio/skills.html', {'skills': skills})
+class SkillsListView(ListView):
+    model = Skill
+    template_name = 'portfolio/skills.html'
+    context_object_name = 'skills'
 
 
-def projects(request):
-    projects = Project.objects.all()
-    return render(request, 'portfolio/projects.html', {'projects': projects})
+class ProjectsListView(ListView):
+    model = Project
+    template_name = 'portfolio/projects.html'
+    context_object_name = 'projects'
 
 
-def education(request):
-    education = Education.objects.all()
-    return render(
-        request,
-        'portfolio/education.html',
-        {'education': education}
-        )
+class EducationListView(ListView):
+    model = Education
+    template_name = 'portfolio/education.html'
+    context_object_name = 'education'
 
 
-def work_experience(request):
-    work_experiences = WorkExperience.objects.all()
-    return render(
-        request,
-        'portfolio/work_experience.html',
-        {'work_experiences': work_experiences}
-        )
+class WorkExperienceListView(ListView):
+    model = WorkExperience
+    template_name = 'portfolio/work_experience.html'
+    context_object_name = 'work_experiences'
