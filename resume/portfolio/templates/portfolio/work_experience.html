@@ -1,7 +1,12 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-    <h2>Опыт работы</h2>
+    <div>
+        <a href="/">
+            <i class="fas fa-arrow-left"></i> Назад
+        </a>
+        <h2>Опыт работы</h2>
+    </div>
 
     <div class="work-experience-container">
         {% for work in work_experiences %}

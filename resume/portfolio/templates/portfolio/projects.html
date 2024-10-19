@@ -1,7 +1,12 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-    <h2>Проекты</h2>
+    <div>
+        <a href="/">
+            <i class="fas fa-arrow-left"></i> Назад
+        </a>
+        <h2>Проекты</h2>
+    </div>
 
     <div class="projects-container">
         {% for project in projects %}
