@@ -17,25 +17,34 @@
     <div class="resume-container">
         <!-- Left section with image and contact details -->
         <div class="left-section">
-            <img src="{% static 'images/profile.jpg' %}"  class="profile-pic">
-            <h1>Денис Кондрашов</h1>
-            
+            {% if profile.image %}
+                <img src="{{ profile.image.url }}" class="profile-pic">
+            {% else %}
+                <p>Изображение не загружено</p>
+            {% endif %}
+
+            <h1>{{ profile.name }}</h1>
+    
             <div class="contact-info">
                 <div class="icon-text">
                     <i class="fas fa-phone"></i>
-                    <span>+7 917 543 71 75</span>
+                    <span>{{ profile.phone }}</span>
                 </div>
                 <div class="icon-text">
                     <i class="fas fa-envelope"></i>
-                    <span>denis.kondrashov1@gmail.com</span>
+                    <span>{{ profile.email }}</span>
                 </div>
                 <div class="icon-text">
-                    <a href="https://t.me/den050" target="_blank">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://vk.com/id92746656" target="_blank">
-                        <i class="fab fa-vk"></i>
-                    </a>
+                    {% if profile.telegram %}
+                        <a href="{{ profile.telegram }}" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    {% endif %}
+                    {% if profile.vk %}
+                        <a href="{{ profile.vk }}" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

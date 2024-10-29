@@ -1,4 +1,21 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+
+
+class UserProfile(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Имя")
+    phone = PhoneNumberField(region="RU")
+    email = models.EmailField(verbose_name="Почта")
+    telegram = models.URLField(blank=True, null=True, verbose_name="Telegram")
+    vk = models.URLField(blank=True, null=True, verbose_name="VK")
+    image = models.ImageField(upload_to='upload_media/', blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Профиль пользователя"
+        verbose_name_plural = "Профили пользователей"
 
 
 class Skill(models.Model):
