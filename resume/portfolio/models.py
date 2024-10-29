@@ -1,6 +1,21 @@
 from django.db import models
 
 
+class UserProfile(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Имя")
+    phone = models.CharField(max_length=15, verbose_name="Телефон")
+    email = models.EmailField(verbose_name="Почта")
+    telegram = models.URLField(blank=True, null=True, verbose_name="Telegram")
+    vk = models.URLField(blank=True, null=True, verbose_name="VK")
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Профиль пользователя"
+        verbose_name_plural = "Профили пользователей"
+
+
 class Skill(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название")
     description = models.TextField(blank=True, verbose_name="Описание")

@@ -3,9 +3,6 @@ from django.views.generic import ListView, TemplateView
 from .models import Project, Education, Skill, WorkExperience
 
 
-# def home(request):
-#     return render(request, 'portfolio/home.html')
-
 class Home(TemplateView):
     template_name = 'portfolio/home.html'
 

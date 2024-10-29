@@ -6,8 +6,20 @@ from .models import (Skill,
                      ProjectImage,
                      EducationImage,
                      Education,
-                     WorkExperience
+                     WorkExperience,
+                     UserProfile,
                      )
+
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'phone',
+        'email',
+        'telegram',
+        'vk',
+        )
 
 
 @admin.register(Skill)
