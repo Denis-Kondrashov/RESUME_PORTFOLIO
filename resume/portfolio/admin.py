@@ -19,7 +19,17 @@ class UserProfileAdmin(admin.ModelAdmin):
         'email',
         'telegram',
         'vk',
+        'preview',
         )
+    readonly_fields = ('preview',)
+
+    def preview(self, obj):
+        if obj.image:
+            return mark_safe(
+                f'<img src="{obj.image.url}" width="100" height="100" />'
+                )
+        return 'Нет изображения'
+    preview.short_description = 'Превью'
 
 
 @admin.register(Skill)
