@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif; 
+    background-image: url('{% static "images/background.jpg" %}');
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
@@ -9,6 +10,7 @@ body {
 
 .resume-container {
     display: flex;
+    flex-direction: column;
     max-width: 900px;
     margin: 50px auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -16,19 +18,17 @@ body {
     overflow: hidden;
 }
 
-.left-section {
+.header-section {
     background-color: rgba(44, 44, 44, 0.9);
     color: white;
     padding: 35px;
     text-align: center;
-    width: 40%;
-    min-height: 560px;
 }
 
 .profile-pic {
     border-radius: 50%;
-    width: 280px;
-    height: 280px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -61,47 +61,25 @@ h1 {
     text-decoration: none;
 }
 
-.right-section {
+.main-content {
     padding: 30px;
-    width: 65%;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-h2, h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 85vh;
-    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .grid-item {
-    width: 60%;
-    margin: 10px 0
+    margin: 10px 0;
 }
 
 .link-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     padding: 30px 0;
     background-color: rgba(44, 44, 44, 0.9);
     color: #ffffff;
