@@ -114,3 +114,55 @@ a {
 .link-box:hover {
     background-color: rgba(44, 44, 44, 0.7);
 }
+
+
+/* Адаптация для экранов шириной до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    /* Уменьшаем внешний контейнер и убираем фиксированные размеры */
+    .resume-container {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Левый и правый разделы становятся на всю ширину */
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    /* Изменение размера изображения профиля на мобильных устройствах */
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Уменьшаем размер иконок и текста для компактного размещения */
+    h1 {
+        font-size: 20px;
+    }
+
+    .icon-text i {
+        font-size: 24px;
+    }
+
+    .icon-text a {
+        font-size: 20px;
+    }
+
+    /* Адаптируем сетку на главной странице */
+    .grid {
+        flex-direction: column;
+        padding: 0 5%;
+        height: auto;
+    }
+
+    .grid-item {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .link-box {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+}

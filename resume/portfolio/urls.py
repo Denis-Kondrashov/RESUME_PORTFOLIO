@@ -11,5 +11,4 @@ urlpatterns = [
     path('education/', views.EducationListView.as_view(), name='education'),
     path('work-experience/',
          views.WorkExperienceListView.as_view(), name='work_experience'),
-]
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)#
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
