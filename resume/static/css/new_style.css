@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left-section {
+    background-color: rgba(44, 44, 44, 0.9);
+    color: white;
+    padding: 35px;
+    text-align: center;
+    width: 40%;
+    min-height: 560px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-text i {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.icon-text a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.right-section {
+    padding: 30px;
+    width: 65%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+h2, h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 85vh;
+    padding: 0 10%;
+}
+
+.grid-item {
+    width: 60%;
+    margin: 10px 0
+}
+
+.link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+    background-color: rgba(44, 44, 44, 0.9);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.link-box:hover {
+    background-color: rgba(44, 44, 44, 0.7);
+}
